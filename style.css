@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif
+  }
+  
+  main {
+    width: 50%;
+    margin: 15px auto;
+  }
+  main div.students{
+    min-width: 32rem;
+  }
+  
+  #studentData input[name="name"] {
+    grid-area: name;
+  }
+  
+  #studentData input[name="age"] {
+    grid-area: age;
+  }
+  
+  #studentData input[name="roll"] {
+    grid-area: roll;
+  }
+  
+  #studentData button {
+    grid-area: button;
+  }
+  
+  #studentData {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "name name"
+      "age roll"
+      "button button"
+
+  }
+  
+  #studentData * {
+    margin: 7px;
+    padding: 7px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  #studentData button {
+    outline: none;
+    background-color: #6495ed;
+    color: white;
+    border: 5px solid transparent;
+    cursor: pointer;
+  }
+  
+  #studentData input {
+    border: 3px solid #6495ed;
+    outline: none;
+  }
+  
+  #studentData input:focus {
+    border: 3px solid #367bfa;
+    box-shadow: rgba(6, 6, 185, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+  
+  #studentData button:active {
+    box-shadow: rgba(6, 6, 185, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    
+  }
+  
+  .students {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid gray;
+    background-color: #ebebeb;
+    color: #2f2f2f;
+    border-radius: 15px;
+  }
+  
+  .students div {
+    padding: 10px;
+    text-align: center;
+  }
